@@ -1,0 +1,133 @@
+header{
+    background: url(https://nordsip.com/wp-content/uploads/2020/10/medical-bottle-with-liquid-for-injection-against-the-background-of-syringes_t20_QzBlnE.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    position: relative;
+    font-family:  Geneva, Tahoma, sans-serif;
+}
+.headerBody{
+    display: flex;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+}
+
+/* header left section  */
+.vacReg{
+    width: 400px;
+    padding: 40px;
+    padding-bottom: 0;
+    height: fit-content;
+    background: lightyellow;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-right: 20px;
+    transition: .5s;
+}
+.vacReg:hover{
+    background: lightgray;
+}
+.vacReg::after{
+    content: '';
+    display: block;
+    height: 10px;
+    background-color: darkblue;
+    margin-bottom: 0;
+    margin-top: 50px;
+    border-radius: 10px 10px 0  0;
+}
+.vacHead{
+    display: flex;
+    justify-content: space-around;
+}
+.vacHead strong{
+    font-size: 27px;
+    text-align: left;
+    text-transform: uppercase;
+    color: darkblue;
+    
+}
+.vacReg p{
+    margin-top: 100px;
+    margin-bottom: 20px;
+    font-size: 18px;
+    color:darkblue;
+    text-transform: capitalize;
+}
+.vacReg::after{
+    content: '';
+    position: relative;
+    bottom: 0;
+    margin: 2px red solid;
+    
+}
+
+
+/* header right section  */
+.vacBtn{
+    width: 400px;
+    height: fit-content;
+   
+}
+
+.btnProperty{
+    height: fit-content;
+    
+}
+.red, .blue, .yellow, .green{
+    display: flex;
+    height: 25%;
+    background: wheat;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    padding: 20px;
+    cursor: pointer;
+}
+.red:hover, .blue:hover, .yellow:hover, .green:hover{
+    background: lightpink;
+}
+.red::before{
+    content: '';
+    display: block;
+    width: 10px;
+    background:darkred;
+    border-radius: 0 10px 10px 0;
+}
+.yellow::before{
+    content: '';
+    display: block;
+    width: 10px;
+    background: yellow;
+    border-radius: 0 10px 10px 0;
+    margin-right: 10px;
+}
+.blue::before{
+    content: '';
+    display: block;
+    width: 10px;
+    background: darkblue;
+    border-radius: 0 10px 10px 0;
+    margin-right: 10px;
+}.green::before{
+    content: '';
+    display: block;
+    width: 10px;
+    background: darkgreen;
+    border-radius: 0 10px 10px 0;
+    margin-right: 10px;
+}
+
+.btnProperty span{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: bold;
+    padding-left: 20px;
+}
+

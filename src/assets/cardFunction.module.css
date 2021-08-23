@@ -1,0 +1,24 @@
+* {
+  font-family: "Arial Narrow Bold", sans-serif;
+}
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+  width: 350px;
+  height: 300x;
+}
+
+span {
+  font-weight: bold;
+  margin-top: 20px;
+  font-size: 24px;
+  text-transform: capitalize;
+}
+p {
+  margin-top: 20px;
+  font-size: 16px;
+  color: darkslategray;
+}

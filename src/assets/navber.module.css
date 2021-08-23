@@ -1,0 +1,45 @@
+
+
+nav{
+   background: wheat;
+   position: fixed;
+   z-index: 100000;
+   width: 100%;
+   box-shadow: gray 2px 5px 50px;
+}
+.adjustment{
+  
+    display: block;
+    width: 100%;
+    height: 90px;
+}
+nav ul{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    justify-items: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+   
+}
+nav li{
+    list-style: none;
+    padding-top: 30px;
+    margin: 0 10px;
+}
+
+nav .listItem:hover{
+    border-bottom: 5px green solid;  
+}
+nav a{
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-family:  Tahoma, sans-serif;
+}
+nav li button{
+   background: orange;
+   color: white;
+   padding: 7px ;
+   border: none;
+   border-radius: 3px;
+}
