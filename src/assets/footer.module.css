@@ -1,0 +1,34 @@
+.footer {
+  display: flex;
+  justify-content: space-around;
+  padding: 50px;
+  background: orangered;
+}
+
+ul {
+  list-style: none;
+}
+li {
+  margin: 10px;
+}
+.links{
+  text-decoration: none;
+  color: white;
+}
+.links:hover{
+    text-decoration: underline;
+}
+/* .secThree, .secFour{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: left;
+  
+} */
+.secThree p, .secFour p{
+    color: white;
+    margin-top: 5px;
+    padding-bottom: 10px;
+   text-align: left;
+}
