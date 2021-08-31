@@ -1,5 +1,5 @@
 import './App.css';
-import HomeRoute from './routers/Home.route';
+import HomeRoute from './routers/Home.route'
 import Footer from './components/Footer.js'
 
 

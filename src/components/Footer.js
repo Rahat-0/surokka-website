@@ -14,17 +14,17 @@ const Footer = () => {
         <div className={styles.secTwo}>
           <ul>
             <li>
-              <a className={styles.links} href="#">
+              <a className={styles.links} href="1">
                 Privacy Policy
               </a>
             </li>
             <li>
-              <a className={styles.links} href="#">
+              <a className={styles.links} href="1">
                 Terms of service
               </a>
             </li>
             <li>
-              <a className={styles.links} href="#">
+              <a className={styles.links} href="1">
                 Other Affiliates
               </a>
             </li>

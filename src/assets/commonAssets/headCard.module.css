@@ -1,0 +1,23 @@
+.comHead{
+    width: 100%;
+    height: 30vh;
+    background-color: lightyellow;
+}
+.comBody{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+   
+}
+.images{
+    max-width: 170px;
+    padding-top: 20px;
+}
+
+/*paragraph style start from here */
+.para{
+    text-align: left;
+    padding: 50px 120px;
+
+}

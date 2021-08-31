@@ -1,11 +1,11 @@
 
 
 nav{
-   background: wheat;
+   background: whitesmoke;
    position: fixed;
    z-index: 100000;
    width: 100%;
-   box-shadow: gray 2px 5px 50px;
+   box-shadow: gray 2px 2px 20px;
 }
 .adjustment{
   
