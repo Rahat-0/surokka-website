@@ -7,6 +7,7 @@ export const SectionOne = () => {
     <div>
       
       <div className={style.cardSection}>
+        <blockquote cite="http://www.worldwildlife.org/who/index.html" />
       <h3>The process of receiving the Covid-19 corona vaccine</h3>
         <div className={style.cardProperty}>
           <CardFunction
@@ -24,6 +25,7 @@ export const SectionOne = () => {
             span="Vaccination"
             p="Subject to receiving a text message on the mobile phone, you have to appear in person at the vaccination center on the specified date with the vaccine card, national identity card and signed consent form to receive the Covid-19 vaccine."
           />
+          
         </div>
       </div>
     </div>

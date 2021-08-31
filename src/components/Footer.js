@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "../assets/footer.module.css";
 
-export const Footer = () => {
+const Footer = () => {
   return (
     <>
       <div className={styles.footer}>
@@ -13,9 +13,21 @@ export const Footer = () => {
         </div>
         <div className={styles.secTwo}>
           <ul>
-            <li><a className={styles.links}  href="#">Privacy Policy</a></li>
-            <li><a className={styles.links} href="#">Terms of service</a></li>
-            <li><a className={styles.links} href="#">Other Affiliates</a></li>
+            <li>
+              <a className={styles.links} href="#">
+                Privacy Policy
+              </a>
+            </li>
+            <li>
+              <a className={styles.links} href="#">
+                Terms of service
+              </a>
+            </li>
+            <li>
+              <a className={styles.links} href="#">
+                Other Affiliates
+              </a>
+            </li>
           </ul>
         </div>
         <div className={styles.secThree}>
@@ -36,3 +48,4 @@ export const Footer = () => {
     </>
   );
 };
+export default Footer;

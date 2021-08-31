@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import style from '../assets/navber.module.css'
 export const Navber = () => {
     return (
@@ -9,16 +10,16 @@ export const Navber = () => {
                     
                     <ul>
                     <img src="https://surokkha.gov.bd/static/media/logo-f.5c608b98.png" alt="logo app" />
-                        <li className={style.listItem}><a href="somenting.com">Home</a></li>
-                        <li className={style.listItem}><a href="somenting.com">Registration</a></li>
-                        <li className={style.listItem}><a href="somenting.com">Registration(Passport)</a></li>
-                        <li className={style.listItem}><a href="somenting.com">Status</a></li>
-                        <li className={style.listItem}><a href="somenting.com">Card</a></li>
-                        <li className={style.listItem}><a href="somenting.com">Certificate</a></li>
-                        <li className={style.listItem}><a href="somenting.com">Verify Cerfificate</a></li>
-                        <li className={style.listItem}><a href="somenting.com">Manual</a></li>
-                        <li className={style.listItem}><a href="somenting.com">FAQ</a></li>
-                        <li><button href="somenting.com">বাংলা</button></li>
+                        <li className={style.listItem}><Link to="/">Home</Link></li>
+                        <li className={style.listItem}><Link to="/registration">Registration</Link></li>
+                        <li className={style.listItem}><Link to="/registrationpassport">Registration(Passport)</Link></li>
+                        <li className={style.listItem}><Link to="/status">Status</Link></li>
+                        <li className={style.listItem}><Link to="/card">Card</Link></li>
+                        <li className={style.listItem}><Link to="/certificate">Certificate</Link></li>
+                        <li className={style.listItem}><Link to="/verifycertificate">Verify Certificate</Link></li>
+                        <li className={style.listItem}><Link to="/manual">Manual</Link></li>
+                        <li className={style.listItem}><Link to="/faq">FAQ</Link></li>
+                        <li><button>বাংলা</button></li>
                     </ul>
                 </nav>
                 

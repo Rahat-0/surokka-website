@@ -1,20 +1,16 @@
 import './App.css';
-import { Footer } from './components/Footer';
-import { Header } from './components/Header';
-import { Navber } from './components/Navber';
-import { SectionOne } from './components/SectionOne';
+import HomeRoute from './routers/Home.route';
+import Footer from './components/Footer.js'
 
 
 function App() {
   return (
     <div className="App">
-      <Navber />
-      <Header />
-      <SectionOne />
+      <HomeRoute />
       <Footer />
-      
     </div>
-  );
+  )
 }
+
 
 export default App;
