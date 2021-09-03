@@ -1,10 +1,18 @@
-import React from 'react'
+import React from "react";
+import style from "../assets/certificate/certificate.module.css";
+import CommonHeadCard from "../components/CommonComponent/CommonHeadCard";
 
 export default function Certificate() {
-    return (
-        <div>
-            <h1>this is certificate page</h1>
-            
-        </div>
-    )
+  return (
+    <>
+      <div className={style.whole}>
+        <CommonHeadCard
+          color="#99ffcc"
+          headTitle="Certificate"
+          imageurl="https://surokkha.gov.bd/static/media/new-certification-card.ac1c4d8c.png"
+          paragraph="Enter your National Identity Card number and date of birth (according to the National Identity Card) in the form below and click on the Verify button. An OTP code will be sent via SMS to the mobile number provided at the time of registration. Then, you can download the Covid-19 Vaccine Certificate."
+        />
+      </div>
+    </>
+  );
 }
