@@ -1,0 +1,94 @@
+.inputs{
+    padding-left: 100px;
+    text-align: left;
+    width: 100%;
+}
+.input_field{
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+    height: 60px;
+    justify-content: space-between;
+    margin-top: 15px;
+    margin-right: 30px;
+    margin-bottom: 15px;
+}
+.options{
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 10px;
+    border: 1px black solid;
+}
+.options:nth-child(2){
+    width: 100%;
+}
+.one{
+    display: flex;
+    justify-content:unset;
+    
+}
+.one:nth-child(2){
+    margin-right: 10px;
+}
+.dob{
+    display: flex;
+    justify-content: space-between;
+    
+}
+.dobs{
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+
+/* capcha field start from here  */
+
+.capcha_field{
+    display: flex;
+    flex-direction: column;
+    justify-content: unset;
+    margin-top: 60px;
+}
+.capcha{
+    position: relative;
+    border: 1px black solid;
+    width: 350px;
+    border-radius: 10px;
+}
+.random{
+    text-align: center;
+    letter-spacing: 2px;
+    padding: 5px;
+    font-size: 30px;
+    font-weight: lighter;
+    background-color: lightgray;
+    border-radius: 10px 10px 0 0;
+    border-bottom: 1px gray solid;
+    
+}
+.icons{  
+    position: absolute;
+    right: 10px;
+    top: 15px;
+}
+.paragh{
+    margin-left: 10px;
+}
+.capinput{
+    padding: 10px;
+    width: 98%;
+    border-radius: 10px;
+    margin: 5px 3px;
+    border: 1px gray solid;
+}
+
+.verifybtn{
+    width: 350px;
+    margin: 20px 0 40px 0;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: lime;
+    border-style: none;
+    font-weight: bold;
+}
