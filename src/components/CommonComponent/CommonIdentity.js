@@ -2,7 +2,7 @@ import React, { useState  } from "react";
 import style from "../../assets/commonAssets/comIdentity.module.css";
 
 export default function CommonIdentity(props) {
-  const latters = "rdhfsdjtragh539678567532";
+  const latters = "rdhfsdjtrag396856752";
   let lengths = latters.length;
   let one = latters.charAt(Math.random() * lengths);
   let two = latters.charAt(Math.random() * lengths);
