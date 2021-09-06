@@ -1,7 +1,11 @@
-import React, { useState } from "react";
+import React, { useState  } from "react";
 import style from "../../assets/commonAssets/comIdentity.module.css";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faUndo } from '@fortawesome/free-solid-svg-icons'
+import CountryList from "./CountryList";
 
-export default function CommonIdentity(props) {
+
+export default function IdentityPassport(props) {
   const latters = "rdhfsdjtrag396856752";
   let lengths = latters.length;
   let one = latters.charAt(Math.random() * lengths);
@@ -13,12 +17,14 @@ export default function CommonIdentity(props) {
 
   const [random, setrandom] = useState(final);
   const [cap, setcap] = useState("");
-  const [SelectData, setSelectData] = useState("--select--");
+  const [SelectData, setSelectData] = useState(false);
   const [SelectSubData, setSelectSubData] = useState(false);
 
   const verifybtn = () => {
     alert("success");
   };
+
+
 
   const capchaGet = (event) => {
     const getdata = event.target.value;
@@ -42,7 +48,7 @@ export default function CommonIdentity(props) {
 
   // sub selection part here
   const selectSubData = (e) => {
-    let Subdata = e.target.value;
+    let Subdata = e.target.name;
     setSelectSubData(Subdata);
   };
 
@@ -56,84 +62,27 @@ export default function CommonIdentity(props) {
           <div className={style.input_field}>
             <label>Select type:</label>
             <select className={style.options} onClick={selectData}>
-              <option value="1"> --Select--</option>
-              <option value="2">
-                Citizen registration (25 years & above){" "}
-              </option>
-              <option value="3">
-                All officers and employees of the Government Health and Family
-                Planning Department
-              </option>
-              <option value="4">
-                Approved private health and family planning officers-employees{" "}
-              </option>
-              <option value="5">
-                All directly involved government and private health care
-                officers=employess{" "}
-              </option>
-              <option value="2">Heroic freedom fighters and heroines </option>
-              <option value="2">Front-line law enforcement agency </option>
-              <option value="2">
-                Military and paramilitary defense forces{" "}
-              </option>
-              <option value="2">Civilian Aircraft </option>
-              <option value="2">
-                Essential Offices for governance the state{" "}
-              </option>
-              <option value="2">Bar Council Registrar Attorney </option>
-              <option value="2">Educational Institutions </option>
-              <option value="2">Front-line media workers </option>
-              <option value="2">Elected Public representative </option>
-              <option value="2">
-                Front-line officers and employess of City Corporation and the
-                municipality{" "}
-              </option>
-              <option value="2">
-                Religiour Representatives (of all religions){" "}
-              </option>
-              <option value="2">Engaged in burial </option>
-              <option value="2">
-                Government officials and employees at the forefront of emergency
-                electrcity, water, gas, sewerage and fire services.{" "}
-              </option>
-              <option value="2">
-                Government officials and employess of railway stations,
-                airports, Land ports and seaprots{" "}
-              </option>
-              <option value="2">
-                Government officials and involved in emergency public service in
-                districts and upazilas{" "}
-              </option>
-              <option value="2">Bank officer-employee</option>
-              <option value="2">Farmer </option>
-              <option value="2">Workers </option>
-              <option value="2">Students 18 years and above </option>
-              <option value="2">National players </option>
-              <option value="2">
-                Students in medical education related subjects{" "}
-              </option>
+              <option > --Select--</option>
+              <option value="2">Foreign National</option>
+              <option value="3">Bangladeshi Workers</option>
+              <option value="3">Bangladeshi Students</option>
             </select>
           </div>
 
-          {SelectData == 3 ? (
+          {SelectData == 2 ? (
             <div className={style.input_field}>
-              <label>Select sub type:</label>
-              <select className={style.options} onClick={selectSubData}>
-                <option>--Select--</option>
-                <option value="111">Doctor</option>
-                <option value="111">Nurse and Midwife</option>
-                <option value="111">Medical Technologist</option>
-                <option value="111">Cleaning staff</option>
-              </select>
+              <label>Select Country:</label>
+                <CountryList onClick={selectSubData} /> 
             </div>
           ) : null}
         </div>
 
-        {SelectData == 2 || SelectSubData == 111 ? (
+        {/* // eslint-disable-next-line eqeqeq */}
+        {SelectData == 3  ||  SelectSubData == 'bangladesh' ? (
           <div>
             <div className={style.one}>
               <div className={style.input_field}>
-                <label>National Identiy Card Number:</label>
+                <label>Passport Number:</label>
                 <input
                   className={style.options}
                   type="number"
@@ -220,13 +169,13 @@ export default function CommonIdentity(props) {
             <div className={style.capcha_field}>
               <div className={style.capcha}>
                 <h4 className={style.random}>{random}</h4>
-                <input
+                <FontAwesomeIcon icon={faUndo}
                   className={style.icons}
                   type="button"
-                  value="icon"
+                  
                   onClick={randomhandle}
                 />
-
+ 
                 <p className={style.paragh}>
                   write the letters from above here
                 </p>

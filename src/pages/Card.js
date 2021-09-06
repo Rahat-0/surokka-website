@@ -1,5 +1,6 @@
 import React from "react";
 import style from "../assets/card/card.module.css";
+import ComIdentity from "../components/CommonComponent/ComIdentity";
 import CommonHeadCard from "../components/CommonComponent/CommonHeadCard";
 export default function Card() {
   return (
@@ -12,6 +13,7 @@ export default function Card() {
           hides = 'Download your Vaccine Card (Passport holder Bangladeshi and Foreigners)'
           paragraph="Enter your National Identity Card number and date of birth (according to the National Identity Card) in the form below and click on the Verify  button. An OTP code will be sent via SMS to the mobile number provided at the time of registration. Then, you can download the Covid-19 Vaccine Card."
         />
+        <ComIdentity />
       </div>
     </>
   );

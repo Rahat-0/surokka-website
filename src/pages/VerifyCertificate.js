@@ -1,5 +1,6 @@
 import React from "react";
 import style from "../assets/verifycertificate/vrfycert.module.css";
+import ComIdentity from "../components/CommonComponent/ComIdentity";
 import CommonHeadCard from "../components/CommonComponent/CommonHeadCard";
 
 export default function VerifyCertificate() {
@@ -13,6 +14,7 @@ export default function VerifyCertificate() {
           hides = "Verify Your Vaccine Certificate (Passport holder Bangladeshi and Foreigners)"
           paragraph="Vaccination Certificate can be verified by clicking on Verify Vaccination Certificate button using NID, date of birth and Vaccination Certificate Number."
         />
+        <ComIdentity />
       </div>
     </>
   );
