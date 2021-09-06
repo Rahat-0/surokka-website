@@ -43,12 +43,12 @@ header{
     display: flex;
     justify-content: space-around;
 }
+
 .vacHead strong{
     font-size: 27px;
     text-align: left;
     text-transform: uppercase;
     color: darkblue;
-    
 }
 .vacReg p{
     margin-top: 100px;

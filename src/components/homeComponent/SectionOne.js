@@ -1,6 +1,6 @@
 import React from "react";
-import { CardFunction } from "./CardFunction";
-import style from "../assets/sectionOne.module.css";
+import { CardFunction } from "../homeComponent/CardFunction";
+import style from "../../assets/sectionOne.module.css";
 
 export const SectionOne = () => {
   return (

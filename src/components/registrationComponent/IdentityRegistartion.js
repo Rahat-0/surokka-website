@@ -20,7 +20,7 @@ export default function IdentityRegistration(props) {
   const [SelectSubData, setSelectSubData] = useState(false);
 
   const verifybtn = () => {
-    alert("success");
+    alert("validations success! backend under building!");
   };
 
   const capchaGet = (event) => {
@@ -118,8 +118,8 @@ export default function IdentityRegistration(props) {
               {props.datass}
             </select>
           </div>
-
-          {SelectData == 3 ? (
+         
+          {  /* eslint-disable */ SelectData == 3 ? ( 
             <div className={style.input_field}>
               <label>Select sub type:</label>
               <select className={style.options} onClick={selectSubData}>
@@ -133,7 +133,7 @@ export default function IdentityRegistration(props) {
           ) : null}
         </div>
 
-        {/* // eslint-disable-next-line eqeqeq */}
+       
         {SelectData == 2 || SelectSubData == 111 ? (
           <div>
             <div className={style.one}>
@@ -150,7 +150,6 @@ export default function IdentityRegistration(props) {
                 <label>
                   Date of birth (according to national identity card):
                 </label>
-
                 <div className={style.dob}>
                   <select className={style.dobs}>
                     <option>day</option>

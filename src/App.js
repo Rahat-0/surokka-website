@@ -1,6 +1,7 @@
 import './App.css';
-import HomeRoute from './routers/Home.route'
-import Footer from './components/Footer.js'
+import Footer from './components/homeComponent/Footer';
+import HomeRoute from './routers/Main.route'
+
 
 
 function App() {

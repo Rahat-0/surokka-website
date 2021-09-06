@@ -18,7 +18,7 @@ export default function ComIdentity(props) {
 
 
   const verifybtn = () => {
-    alert("success");
+    alert("validations success! backend under building!");
   };
 
   const capchaGet = (event) => {

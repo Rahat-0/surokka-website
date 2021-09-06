@@ -1,5 +1,5 @@
 import React from 'react'
-import style from '../assets/cardFunction.module.css'
+import style from '../../assets/cardFunction.module.css'
 
 export const CardFunction = (props) => {
     return (

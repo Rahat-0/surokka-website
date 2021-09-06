@@ -12,6 +12,7 @@ nav{
     display: block;
     width: 100%;
     height: 90px;
+  
 }
 nav ul{
     display: flex;

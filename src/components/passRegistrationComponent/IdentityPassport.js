@@ -1,9 +1,8 @@
-import React, { useState  } from "react";
+import React, { useState } from "react";
 import style from "../../assets/commonAssets/comIdentity.module.css";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faUndo } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faUndo } from "@fortawesome/free-solid-svg-icons";
 import CountryList from "./CountryList";
-
 
 export default function IdentityPassport(props) {
   const latters = "rdhfsdjtrag396856752";
@@ -21,19 +20,12 @@ export default function IdentityPassport(props) {
   const [SelectSubData, setSelectSubData] = useState(false);
 
   const verifybtn = () => {
-    alert("success");
+    alert("validations success! backend under building!");
   };
-
-
 
   const capchaGet = (event) => {
     const getdata = event.target.value;
     setcap(getdata);
-    // if(cap === random){
-    //   alert('verifivation success')
-    // }else{
-    //   alert('verifivation fail')
-    // }
   };
 
   let randomhandle = () => {
@@ -62,23 +54,25 @@ export default function IdentityPassport(props) {
           <div className={style.input_field}>
             <label>Select type:</label>
             <select className={style.options} onClick={selectData}>
-              <option > --Select--</option>
+              <option> --Select--</option>
               <option value="2">Foreign National</option>
               <option value="3">Bangladeshi Workers</option>
               <option value="3">Bangladeshi Students</option>
             </select>
           </div>
 
-          {SelectData == 2 ? (
-            <div className={style.input_field}>
-              <label>Select Country:</label>
-                <CountryList onClick={selectSubData} /> 
-            </div>
-          ) : null}
+          {
+            /*eslint-disable */ SelectData == 2 ? (
+              <div className={style.input_field}>
+                <label>Select Country:</label>
+                <CountryList onClick={selectSubData} />
+              </div>
+            ) : null
+          }
         </div>
 
         {/* // eslint-disable-next-line eqeqeq */}
-        {SelectData == 3  ||  SelectSubData == 'bangladesh' ? (
+        {SelectData == 3 || SelectSubData == "bangladesh" ? (
           <div>
             <div className={style.one}>
               <div className={style.input_field}>
@@ -169,13 +163,13 @@ export default function IdentityPassport(props) {
             <div className={style.capcha_field}>
               <div className={style.capcha}>
                 <h4 className={style.random}>{random}</h4>
-                <FontAwesomeIcon icon={faUndo}
+                <FontAwesomeIcon
+                  icon={faUndo}
                   className={style.icons}
                   type="button"
-                  
                   onClick={randomhandle}
                 />
- 
+
                 <p className={style.paragh}>
                   write the letters from above here
                 </p>
