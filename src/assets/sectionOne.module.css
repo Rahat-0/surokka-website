@@ -33,3 +33,10 @@ h3 {
 
   }
 }
+@media screen and (max-width : 647px) {
+  .cardSection {
+    margin: 15px;
+    padding: 5px;
+
+  }
+}

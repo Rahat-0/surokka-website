@@ -21,4 +21,13 @@ p {
   margin-top: 20px;
   font-size: 16px;
   color: darkslategray;
+  word-wrap:break-word;
+  height: fit-content;
+}
+
+@media screen and (max-width : 647px ) {
+    p{
+      width: 250px;
+      
+    }
 }

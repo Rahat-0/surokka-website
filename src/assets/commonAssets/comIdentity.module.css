@@ -1,7 +1,6 @@
 .inputs{
     padding-left: 100px;
     text-align: left;
-    width: 100%;
 }
 .input_field{
     display: flex;
@@ -108,4 +107,25 @@
         flex-direction: column;
     }
     
+}
+
+@media screen and (max-width : 620px) {
+    .inputs{
+        padding-left: 5px;
+    }
+    .dobs{
+        width: 300px;
+    }
+    .input_field{
+        width: 300px;
+
+        
+    }
+    .capcha{
+        width: 300px;
+        
+    }
+    .verifybtn{
+        width: 300px;
+    }
 }

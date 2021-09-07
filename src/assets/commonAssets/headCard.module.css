@@ -35,3 +35,8 @@ h3:hover{
     margin-top: 30px;
     line-height: 25px;
 }
+@media screen and (max-width : 620px) {
+    .para{
+        padding: 20px;
+    }
+}
