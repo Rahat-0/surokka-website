@@ -2,10 +2,22 @@
 
 nav{
    background: whitesmoke;
+   display: flex;
+   justify-content: center;
    position: fixed;
-   z-index: 100000;
+   z-index: 1000;
    width: 100%;
    box-shadow: gray 2px 2px 20px;
+   padding: 5px;
+}
+#ico{
+    display: none;
+}
+.bars{
+    
+    /* display: flex;
+    width: 100%;
+    justify-content: space-between; */
 }
 .adjustment{
   
@@ -15,27 +27,32 @@ nav{
   
 }
 nav ul{
+    position: relative;
     display: flex;
     justify-content: center;
     text-align: center;
-    justify-items: center;
-    padding-top: 5px;
-    padding-bottom: 5px;
-   
+    align-items: center;
+    padding: 5px;
+    transition: .5s;
 }
 nav li{
     list-style: none;
-    padding-top: 30px;
-    margin: 0 10px;
 }
 
-nav .listItem:hover{
-    border-bottom: 5px green solid;  
+nav a:hover{
+    border-bottom: 5px darkblue solid;  
 }
+nav a:focus{
+    border-bottom: 5px darkblue  solid; 
+}
+
 nav a{
     text-decoration: none;
     font-size: 1.1rem;
     font-family:  Tahoma, sans-serif;
+    color: darkblue;
+    padding-bottom: 31px; 
+    
 }
 nav li button{
    background: orange;
@@ -43,4 +60,51 @@ nav li button{
    padding: 7px ;
    border: none;
    border-radius: 3px;
+}
+
+
+@media screen and (max-width: 950px){
+
+    #ico{
+        display: inline-block;
+        font-size: 25px;
+        border: solid gray 1px;
+        padding: 4px 6px;
+        margin-right: 10px;
+    }
+    .bars{
+        
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: space-between;
+    }
+    nav{
+        flex-direction: column;
+    }
+    nav ul{
+        
+        flex-direction: column;
+        background: coral;
+    }
+    
+    nav a{
+
+        padding-bottom: 5px; 
+        
+    }
+  
+    
+}
+@media screen and (max-width : 650px) {
+    #ico{
+        font-size: 18px;
+        margin-right: 5px;
+    }
+    .bars img{
+        max-width: 150px;
+    }
+    .adjustment{
+        height: 60px;
+    }
 }

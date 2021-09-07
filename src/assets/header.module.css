@@ -26,6 +26,7 @@ header{
     cursor: pointer;
     margin-right: 20px;
     transition: .5s;
+    text-align: center;
 }
 .vacReg:hover{
     background: lightgray;
@@ -129,5 +130,28 @@ header{
     text-align: center;
     font-weight: bold;
     padding-left: 20px;
+}
+
+@media screen and (max-width : 824px) {
+    header{
+        height:170vh;
+    }
+    .headerBody{
+        flex-direction: column;
+        row-gap: 50px;
+    }
+    .vacReg{
+        width: 600px;
+    }
+    .vacBtn{
+       width: 600px;
+       
+    }
+}
+
+@media screen and (max-width : 620px) {
+    .vacBtn , .vacReg{
+        width: 450px;
+    }
 }
 

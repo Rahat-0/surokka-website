@@ -1,7 +1,7 @@
 .cardSection {
   margin: 90px;
   padding: 0 60px;
-  height: 70vh;
+  height: fit-content;
   box-shadow: -2px 2px 10px lightgray;
 }
 
@@ -18,5 +18,18 @@ h3 {
   display: flex;
   justify-content: space-between;
   width: 100%;
+  align-items: center;
   
+}
+
+@media screen and (max-width : 824px) {
+  .cardProperty {
+    flex-direction: column;
+    row-gap: 10px;
+  }
+  .cardSection {
+    margin: 60px;
+    padding: 20px;
+
+  }
 }

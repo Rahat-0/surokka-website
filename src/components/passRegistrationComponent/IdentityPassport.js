@@ -5,7 +5,7 @@ import { faUndo } from "@fortawesome/free-solid-svg-icons";
 import CountryList from "./CountryList";
 
 export default function IdentityPassport(props) {
-  const latters = "rdhfsdjtrag396856752";
+  const latters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
   let lengths = latters.length;
   let one = latters.charAt(Math.random() * lengths);
   let two = latters.charAt(Math.random() * lengths);

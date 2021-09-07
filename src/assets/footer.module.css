@@ -18,17 +18,18 @@ li {
 .links:hover{
     text-decoration: underline;
 }
-/* .secThree, .secFour{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    text-align: left;
-  
-} */
+
 .secThree p, .secFour p{
     color: white;
     margin-top: 5px;
     padding-bottom: 10px;
    text-align: left;
+}
+
+@media screen and (max-width : 824px) {
+  .footer {
+    flex-direction: column;
+    padding: 50px;
+    text-align: left;
+  }
 }
