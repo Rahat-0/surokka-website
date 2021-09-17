@@ -1,20 +1,22 @@
 import React, { useState } from "react";
 import style from "../../assets/commonAssets/comIdentity.module.css";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faUndo } from '@fortawesome/free-solid-svg-icons'
-
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faUndo } from "@fortawesome/free-solid-svg-icons";
 
 export default function IdentityRegistration(props) {
-  const latters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
-  let lengths = latters.length;
-  let one = latters.charAt(Math.random() * lengths);
-  let two = latters.charAt(Math.random() * lengths);
-  let three = latters.charAt(Math.random() * lengths);
-  let four = latters.charAt(Math.random() * lengths);
-  let result = one + two + three + four;
-  let final = result.toString();
+  let rendom = () => {
+    const latters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+    let lengths = latters.length;
 
-  const [random, setrandom] = useState(final);
+    let numbers = () => {
+      return latters.charAt(Math.random() * lengths);
+    };
+    return (
+      numbers() + numbers() + numbers() + numbers() + numbers() + numbers()
+    );
+  };
+
+  const [random, setrandom] = useState(rendom);
   const [cap, setcap] = useState("");
   const [SelectData, setSelectData] = useState("--select--");
   const [SelectSubData, setSelectSubData] = useState(false);
@@ -34,7 +36,7 @@ export default function IdentityRegistration(props) {
   };
 
   let randomhandle = () => {
-    setrandom(final);
+    setrandom(rendom);
   };
 
   // main selection part here
@@ -58,7 +60,7 @@ export default function IdentityRegistration(props) {
         <div className={style.one}>
           <div className={style.input_field}>
             <label>Select type:</label>
-            <select className={style.options} onClick={selectData}>
+            <select className={style.options} onChange={selectData}>
               <option value="1"> --Select--</option>
               <option value="2">
                 Citizen registration (25 years & above){" "}
@@ -67,10 +69,10 @@ export default function IdentityRegistration(props) {
                 All officers and employees of the Government Health and Family
                 Planning Department
               </option>
-              <option value="4">
+              <option value="2">
                 Approved private health and family planning officers-employees{" "}
               </option>
-              <option value="5">
+              <option value="2">
                 All directly involved government and private health care
                 officers=employess{" "}
               </option>
@@ -118,22 +120,23 @@ export default function IdentityRegistration(props) {
               {props.datass}
             </select>
           </div>
-         
-          {  /* eslint-disable */ SelectData == 3 ? ( 
-            <div className={style.input_field}>
-              <label>Select sub type:</label>
-              <select className={style.options} onClick={selectSubData}>
-                <option>--Select--</option>
-                <option value="111">Doctor</option>
-                <option value="111">Nurse and Midwife</option>
-                <option value="111">Medical Technologist</option>
-                <option value="111">Cleaning staff</option>
-              </select>
-            </div>
-          ) : null}
+
+          {
+            /* eslint-disable */ SelectData == 3 ? (
+              <div className={style.input_field}>
+                <label>Select sub type:</label>
+                <select className={style.options} onChange={selectSubData}>
+                  <option>--Select--</option>
+                  <option value="111">Doctor</option>
+                  <option value="111">Nurse and Midwife</option>
+                  <option value="111">Medical Technologist</option>
+                  <option value="111">Cleaning staff</option>
+                </select>
+              </div>
+            ) : null
+          }
         </div>
 
-       
         {SelectData == 2 || SelectSubData == 111 ? (
           <div>
             <div className={style.one}>
@@ -224,13 +227,13 @@ export default function IdentityRegistration(props) {
             <div className={style.capcha_field}>
               <div className={style.capcha}>
                 <h4 className={style.random}>{random}</h4>
-                <FontAwesomeIcon icon={faUndo}
+                <FontAwesomeIcon
+                  icon={faUndo}
                   className={style.icons}
                   type="button"
-                  
                   onClick={randomhandle}
                 />
- 
+
                 <p className={style.paragh}>
                   write the letters from above here
                 </p>

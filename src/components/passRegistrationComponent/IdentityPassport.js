@@ -5,16 +5,20 @@ import { faUndo } from "@fortawesome/free-solid-svg-icons";
 import CountryList from "./CountryList";
 
 export default function IdentityPassport(props) {
-  const latters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
-  let lengths = latters.length;
-  let one = latters.charAt(Math.random() * lengths);
-  let two = latters.charAt(Math.random() * lengths);
-  let three = latters.charAt(Math.random() * lengths);
-  let four = latters.charAt(Math.random() * lengths);
-  let result = one + two + three + four;
-  let final = result.toString();
+  let rendom = () => {
+    const latters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+    let lengths = latters.length;
 
-  const [random, setrandom] = useState(final);
+    let numbers = () => {
+      return latters.charAt(Math.random() * lengths);
+    };
+    return (
+      numbers() + numbers() + numbers() + numbers() + numbers() + numbers()
+    );
+  };
+
+
+  const [random, setrandom] = useState(rendom);
   const [cap, setcap] = useState("");
   const [SelectData, setSelectData] = useState(false);
   const [SelectSubData, setSelectSubData] = useState(false);
@@ -29,7 +33,7 @@ export default function IdentityPassport(props) {
   };
 
   let randomhandle = () => {
-    setrandom(final);
+    setrandom(rendom);
   };
 
   // main selection part here
@@ -53,7 +57,7 @@ export default function IdentityPassport(props) {
         <div className={style.one}>
           <div className={style.input_field}>
             <label>Select type:</label>
-            <select className={style.options} onClick={selectData}>
+            <select className={style.options} onChange={selectData}>
               <option> --Select--</option>
               <option value="2">Foreign National</option>
               <option value="3">Bangladeshi Workers</option>

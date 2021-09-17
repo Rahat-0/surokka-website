@@ -81,7 +81,7 @@ header{
 }
 .red, .blue, .yellow, .green{
     display: flex;
-    height: 25%;
+    height: 91px;
     background: wheat;
     margin-bottom: 20px;
     border-radius: 10px;
@@ -135,7 +135,11 @@ header{
 
 @media screen and (max-width : 824px) {
     header{
-        height:170vh;
+        min-height: 100vh;
+    }
+    .vacReg p{
+        margin-top: 30px;
+        margin-bottom: 20px;
     }
     .headerBody{
         flex-direction: column;
@@ -153,6 +157,9 @@ header{
 @media screen and (max-width : 620px) {
     .vacBtn , .vacReg{
         width: 300px;
+        min-height: 200px;
+        margin-right: 0px;
+        padding-bottom: 5;
     }
     .HeadImg{
         width: 200px;
@@ -165,3 +172,19 @@ header{
     }
 }
 
+@media screen and (max-width : 568px) {
+    header{
+        min-height: 150vh;
+    }
+    .vacReg{
+       
+        padding: 40px;
+        padding-bottom: 5;
+
+    }
+    .vacHead img{
+        width: 100px;
+    }
+    
+    
+}
