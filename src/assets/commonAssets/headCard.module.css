@@ -24,6 +24,16 @@ h3{
 h3:hover{
     text-decoration: underline;
 }
+.last{
+    padding: 0 0 0 10px;
+    font-size: 20px;
+    color: black;
+    margin-top: 50px ;
+    cursor:text;
+}
+.last:hover{
+    text-decoration: none;
+}
 /*paragraph style start from here */
 .para{
     margin-top: 10px;

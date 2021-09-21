@@ -17,6 +17,7 @@ export default function CommonHeadCard(props) {
       <div className={style.para}>
       <h3>{props.hides}</h3>
         <p>{props.paragraph} </p>
+        <h3 className={style.last}>{props.last}</h3>
       </div>
     </div>
   );

@@ -1,0 +1,23 @@
+.faqCom{
+    text-align: left;
+    padding: 10px 100px;
+    
+}
+
+
+.faqUl{
+    list-style:disc;
+    color: rgb(10, 10, 68);
+    transition: 1s;
+    cursor: pointer;
+}
+.faqUl li{
+    font-weight: bolder;
+}
+.faqPara{
+    padding-left: 10px;
+    font-weight: lighter;
+    transition: 1s;
+    line-height: 25px;
+    cursor: text;
+}

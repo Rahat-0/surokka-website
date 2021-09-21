@@ -4,14 +4,17 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUndo } from "@fortawesome/free-solid-svg-icons";
 
 export default function ComIdentity(props) {
-  const latters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
-  let lengths = latters.length;
-  let one = latters.charAt(Math.random() * lengths);
-  let two = latters.charAt(Math.random() * lengths);
-  let three = latters.charAt(Math.random() * lengths);
-  let four = latters.charAt(Math.random() * lengths);
-  let result = one + two + three + four;
-  let final = result.toString();
+  let final = () => {
+    const latters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+    let lengths = latters.length;
+
+    let numbers = () => {
+      return latters.charAt(Math.random() * lengths);
+    };
+    return (
+      numbers() + numbers() + numbers() + numbers() + numbers() + numbers()
+    );
+  };
 
   const [random, setrandom] = useState(final);
   const [cap, setcap] = useState("");
