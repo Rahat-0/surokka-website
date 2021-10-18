@@ -1,13 +1,15 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
-import style from "../../assets/navber.module.css";
+import { NavLink } from "react-router-dom";
+import styles from "../../assets/navber.module.css";
 export const Navber = () => {
   const [ico, setIco] = useState(true);
+
+  const activeStyle = "5px darkblue  solid";
 
   return (
     <>
       <nav>
-        <div className={style.bars}>
+        <div className={styles.bars}>
           <div>
             <img
               src="https://surokkha.gov.bd/static/media/logo-f.5c608b98.png"
@@ -18,7 +20,7 @@ export const Navber = () => {
             {ico !== true ? (
               <i
                 className="fas fa-bars 3x"
-                id={style.ico}
+                id={styles.ico}
                 onClick={() => {
                   setIco(!ico);
                 }}
@@ -26,7 +28,7 @@ export const Navber = () => {
             ) : (
               <i
                 className="fas fa-times"
-                id={style.ico}
+                id={styles.ico}
                 onClick={() => {
                   setIco(!ico);
                 }}
@@ -36,32 +38,62 @@ export const Navber = () => {
         </div>
         {ico !== false ? (
           <ul>
-            <li className={style.listItem}>
-              <Link to="/">Home</Link>
+            <li className={styles.listItem}>
+              <NavLink activeStyle={{ borderBottom: activeStyle }} exact to="/">
+                Home
+              </NavLink>
             </li>
-            <li className={style.listItem}>
-              <Link to="/registration">Registration</Link>
+            <li className={styles.listItem}>
+              <NavLink
+                activeStyle={{ borderBottom: activeStyle }}
+                to="/registration"
+              >
+                Registration
+              </NavLink>
             </li>
-            <li className={style.listItem}>
-              <Link to="/registrationpassport">Registration(Passport)</Link>
+            <li className={styles.listItem}>
+              <NavLink
+                activeStyle={{ borderBottom: activeStyle }}
+                to="/registrationpassport"
+              >
+                Registration(Passport)
+              </NavLink>
             </li>
-            <li className={style.listItem}>
-              <Link to="/status">Status</Link>
+            <li className={styles.listItem}>
+              <NavLink activeStyle={{ borderBottom: activeStyle }} to="/status">
+                Status
+              </NavLink>
             </li>
-            <li className={style.listItem}>
-              <Link to="/card">Card</Link>
+            <li className={styles.listItem}>
+              <NavLink activeStyle={{ borderBottom: activeStyle }} to="/card">
+                Card
+              </NavLink>
             </li>
-            <li className={style.listItem}>
-              <Link to="/certificate">Certificate</Link>
+            <li className={styles.listItem}>
+              <NavLink
+                activeStyle={{ borderBottom: activeStyle }}
+                to="/certificate"
+              >
+                Certificate
+              </NavLink>
             </li>
-            <li className={style.listItem}>
-              <Link to="/verifycertificate">Verify Certificate</Link>
+            <li className={styles.listItem}>
+              <NavLink
+                activeStyle={{ borderBottom: activeStyle }}
+                to="/verifycertificate"
+              >
+                Verify Certificate
+              </NavLink>
             </li>
-            <li className={style.listItem}>
-              <Link to="/manual">Manual</Link>
+            <li className={styles.listItem}>
+              <NavLink activeStyle={{ borderBottom: activeStyle }} to="/manual">
+                Manual
+              </NavLink>
             </li>
-            <li className={style.listItem}>
-              <Link to="/faq">FAQ</Link>
+            <li className={styles.listItem}>
+              <NavLink activeStyle={{ borderBottom: activeStyle }} to="/faq">
+                FAQ
+              </NavLink>
             </li>
             <li>
               <button>বাংলা</button>
@@ -70,7 +102,7 @@ export const Navber = () => {
         ) : null}
       </nav>
 
-      <div className={style.adjustment}></div>
+      <div className={styles.adjustment}></div>
     </>
   );
 };

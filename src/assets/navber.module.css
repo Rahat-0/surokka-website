@@ -39,9 +39,13 @@ nav li{
     list-style: none;
 }
 
+
 nav a:hover{
-    border-bottom: 5px darkblue solid;  
+    border-bottom: 5px darkblue solid;
+    transition: .3s;
+    border-radius: 5px;
 }
+
 nav a:focus{
     border-bottom: 5px darkblue  solid; 
 }

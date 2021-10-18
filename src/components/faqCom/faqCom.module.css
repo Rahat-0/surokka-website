@@ -21,3 +21,9 @@
     line-height: 25px;
     cursor: text;
 }
+
+@media screen and (max-width : 647px) {
+    .faqCom{
+        padding: 10px 40px;   
+    }
+  }
